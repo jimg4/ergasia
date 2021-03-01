@@ -6,6 +6,138 @@ body {
     width: 100%;
     height: auto;
 } */
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-Black.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-BlackItalic.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-BlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-Bold.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-ExtraBoldItalic.woff2")
+            format("woff2"),
+        url("../fonts/nunito-woff/Nunito-ExtraBoldItalic.woff") format("woff");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("Nunito-ExtraBold.woff2") format("woff2"),
+        url("Nunito-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-BoldItalic.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-ExtraLight.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-Italic.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-ExtraLightItalic.woff2")
+            format("woff2"),
+        url("../fonts/nunito-woff/Nunito-ExtraLightItalic.woff") format("woff");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-Light.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-LightItalic.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-Regular.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-SemiBoldItalic.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-woff/Nunito-SemiBold.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+.container {
+    font-family: "Nunito";
+}
+
 #welcome .row {
     color: white;
 }
@@ -24,16 +156,15 @@ body {
     outline: 1px dashed var(--gray);
 }
 
-.hero-bg {
+#hero {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url(/material/downloads/hero.jpg);
+        url(../img/hero.jpg);
     background-size: cover;
     background-position-x: 550px;
 }
 
 .hero-text {
     color: white;
-    text-align: center;
 }
 .hero-text * + * {
     margin-top: 1em;
