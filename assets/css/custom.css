@@ -6,16 +6,35 @@ body {
     width: 100%;
     height: auto;
 } */
-.row {
+#welcome .row {
     color: white;
 }
-.row + .row {
+#welcome .row + .row {
     margin-top: 2em;
 }
 
-.row div:nth-of-type(odd) {
+#welcome .row div:nth-of-type(odd) {
     background-color: crimson;
 }
-.row div:nth-of-type(even) {
+#welcome .row div:nth-of-type(even) {
     background-color: black;
+}
+
+.container {
+    outline: 1px dashed var(--gray);
+}
+
+.hero-bg {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(/material/downloads/hero.jpg);
+    background-size: cover;
+    background-position-x: 550px;
+}
+
+.hero-text {
+    color: white;
+    text-align: center;
+}
+.hero-text * + * {
+    margin-top: 1em;
 }
