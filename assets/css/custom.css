@@ -1,11 +1,13 @@
-/* html,
-body {
-    height: 100%;
+:root {
+    --white: #fff;
+    --mpez: #fff5ec;
+    --accent: #dc965a;
+    --black: #0f0a0a;
+    --gray: #5e6472;
+    --icon-bg: rgb(255, 245, 236);
+    --border: 1px solid rgba(255, 255, 255, 0.2);
 }
-#header {
-    width: 100%;
-    height: auto;
-} */
+/* ------------fonts---------- */
 @font-face {
     font-family: "Nunito";
     src: url("../fonts/nunito-woff/Nunito-Black.woff2") format("woff2"),
@@ -138,29 +140,12 @@ body {
     font-family: "Nunito";
 }
 
-#welcome .row {
-    color: white;
-}
-#welcome .row + .row {
-    margin-top: 2em;
-}
-
-#welcome .row div:nth-of-type(odd) {
-    background-color: crimson;
-}
-#welcome .row div:nth-of-type(even) {
-    background-color: black;
-}
-
-.container {
-    outline: 1px dashed var(--gray);
-}
-
+/* hero section */
 #hero {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
         url(../img/hero.jpg);
     background-size: cover;
-    background-position-x: 550px;
+    background-repeat: no-repeat;
 }
 
 .hero-text {
@@ -168,4 +153,30 @@ body {
 }
 .hero-text * + * {
     margin-top: 1em;
+}
+
+/* welcome section  */
+#welcome {
+    padding: 7em 0em;
+    background: linear-gradient(90deg, var(--accent) 33.3%, transparent 33.3%);
+}
+
+.img-box {
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 25%) 0px 25px 50px -12px;
+}
+#welcome img {
+    max-width: 100%;
+}
+
+.btn {
+    background-color: var(--accent);
+    border-radius: 0;
+    color: var(--white);
+}
+
+/* sevices section  */
+#services {
+    background-color: var(--mpez);
 }
