@@ -137,8 +137,30 @@
     font-display: swap;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 70px;
+}
+
 .container {
     font-family: "Nunito";
+}
+
+/* header styles  */
+
+#header nav {
+    border-bottom: var(--border);
+    padding: 0 1rem;
+}
+
+#header nav ul a {
+    border-left: var(--border);
+    height: 100%;
+    padding: 1.45em;
+}
+
+#header nav ul a:nth-last-of-type(1) {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* hero section */
@@ -158,8 +180,18 @@
 
 /* welcome section  */
 #welcome {
-    padding: var(--section-padding);
     background: linear-gradient(90deg, var(--accent) 33.3%, transparent 33.3%);
+    padding: var(--section-padding);
+}
+
+@media screen and (max-width: 990px) {
+    #welcome {
+        background: var(--white);
+    }
+
+    .welcome-text {
+        margin-top: 6em;
+    }
 }
 
 .img-box {
@@ -182,8 +214,24 @@
     background-color: var(--mpez);
     padding: var(--section-padding);
 }
+
+.services-title h3 {
+    position: relative;
+}
+
+.services-title h3::before {
+    content: "";
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
 .services-title p {
-    margin-top: 3em;
+    margin: 4em 0;
 }
 
 #services i {
@@ -199,4 +247,143 @@
 
 .services-box * + * {
     margin-top: 1em;
+}
+
+/* skills section  */
+
+#skills {
+    padding: var(--section-padding);
+}
+
+#skills span {
+    font-size: 12px;
+}
+
+.skills__card {
+    padding: 2em;
+}
+
+#skills .skills__card:nth-of-type(1) .skills__card__section {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+#skills .skills__card:nth-of-type(2) .skills__card__section {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#skills .skills__card:nth-of-type(3) .skills__card__section {
+    background-color: var(--mpez);
+    color: var(--black);
+    /* padding: 2em 0; */
+}
+
+#skills .skills__card:nth-of-type(3) span {
+    background-color: var(--black);
+    color: var(--white);
+    padding-bottom: 1.2em;
+}
+
+#skills .skills__card:nth-of-type(1) span {
+    background-color: var(--black);
+}
+
+#skills .skills__card:nth-of-type(2) span {
+    background-color: var(--accent);
+}
+
+#skills .skills__card span {
+    padding: 4px 12px;
+    border-radius: 30px;
+}
+
+.skills__card__section + .skills__card__section {
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.skills__card__section {
+    padding: 1em;
+}
+
+.skills__card:nth-of-type(1) .skills__card__section > *,
+.skills__card:nth-of-type(2) .skills__card__section > * {
+    margin-top: 1em;
+}
+
+#skills .skills__card__section.my-skills {
+    padding: 1.5885em 1em; /* change later */
+}
+
+/* skill-bar styles */
+
+.skill-bar {
+    width: 300px;
+    height: 10px;
+    background-color: var(--black);
+    position: relative;
+}
+
+#skills .skill-bar span {
+    padding: 0.5em 0.5em 1.5em 0.5em;
+    border-radius: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 69%, 0 69%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 69%, 0 69%);
+    position: absolute;
+    top: -450%;
+}
+
+.skill-bar::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+}
+
+.skills__card__section:nth-of-type(1) .skill-bar span {
+    left: calc(92% - 3.1em);
+}
+
+.skills__card__section:nth-of-type(1) .skill-bar::before {
+    width: 92%;
+    background-color: var(--accent);
+}
+
+.skills__card__section:nth-of-type(2) .skill-bar span {
+    left: calc(75% - 3.1em);
+}
+
+.skills__card__section:nth-of-type(2) .skill-bar::before {
+    width: 75%;
+    background-color: var(--accent);
+}
+
+.skills__card__section:nth-of-type(3) .skill-bar span {
+    left: calc(86% - 3.1em);
+}
+
+.skills__card__section:nth-of-type(3) .skill-bar::before {
+    width: 86%;
+    background-color: var(--accent);
+}
+
+.skills__card__section:nth-of-type(4) .skill-bar span {
+    left: calc(88% - 3.1em);
+}
+
+.skills__card__section:nth-of-type(4) .skill-bar::before {
+    width: 88%;
+    background-color: var(--accent);
+}
+
+.skills__card__section:nth-of-type(5) .skill-bar span {
+    left: calc(92% - 3.1em);
+}
+
+.skills__card__section:nth-of-type(5) .skill-bar::before {
+    width: 92%;
+    background-color: var(--accent);
+}
+
+.skill-bar span {
+    transform: translate(0px, 7px);
 }

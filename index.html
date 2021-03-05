@@ -16,8 +16,8 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <header id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">dimef</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -27,22 +27,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link px-3" href="#">HOME<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#header">HOME<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#">ABOUT US</a>
+              <a class="nav-link" href="#welcome">ABOUT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#">SERVICES</a>
+              <a class="nav-link" href="#services">SERVICES</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#">PORTFOLIO</a>
+              <a class="nav-link" href="#">PORTFOLIO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#">BLOG</a>
+              <a class="nav-link" href="#">BLOG</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#">CONTACT</a>
+              <a class="nav-link" href="#">CONTACT</a>
             </li>
           </ul>
         </div>
@@ -73,7 +73,7 @@
               <img src="assets/img/welcome.png" alt="">
             </div>
           </div>
-          <div class="col-lg-6 pl-5 align-self-center">
+          <div class="col-lg-6 pl-5 align-self-center welcome-text">
             <h3>Dimitrios Efstathiadis</h3>
             <h5>Freelancer</h5>
             <p>I design and develop services for customers of all sizes, modern websites, web services and online
@@ -99,7 +99,7 @@
           </div>
         </div>
         <div class="row services-grid">
-          <div class="col-md-4 col-lg-4">
+          <div class="col-md-4 col-lg-4 mt-4">
             <div class="services-box">
               <i class="ti-ruler"></i>
               <h5>Development</h5>
@@ -108,7 +108,7 @@
                 aliqua.</p>
             </div>
           </div>
-          <div class="col-md-4 col-lg-4">
+          <div class="col-md-4 col-lg-4 mt-4">
             <div class="services-box">
               <i class="ti-image"></i>
               <h5>Graphic</h5>
@@ -117,7 +117,7 @@
                 aliqua.</p>
             </div>
           </div>
-          <div class="col-md-4 col-lg-4">
+          <div class="col-md-4 col-lg-4 mt-4">
             <div class="services-box">
               <i class="ti-layout"></i>
               <h5>Web Design</h5>
@@ -157,7 +157,94 @@
       </div>
     </section>
 
-    <section id="skills"></section>
+    <section id="skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 skills__card">
+            <div class="services__card__title">
+              <h4>Education</h4>
+            </div>
+            <div class="row flex-column">
+              <div class="col skills__card__section">
+                <span>2010-2012</span>
+                <h6>Graphic Designer</h6>
+                <p>International Design Institute</p>
+              </div>
+              <div class="col skills__card__section">
+                <span>2010-2012</span>
+                <h6>Graphic Designer</h6>
+                <p>International Design Institute</p>
+              </div>
+              <div class="col skills__card__section">
+                <span>2010-2012</span>
+                <h6>Graphic Designer</h6>
+                <p>International Design Institute</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 skills__card">
+            <div class="services__card__title">
+              <h4>Experience</h4>
+            </div>
+            <div class="row flex-column">
+              <div class="col skills__card__section">
+                <span>2010-2012</span>
+                <h6>Graphic Designer</h6>
+                <p>International Design Institute</p>
+              </div>
+              <div class="col skills__card__section">
+                <span>2010-2012</span>
+                <h6>Graphic Designer</h6>
+                <p>International Design Institute</p>
+              </div>
+              <div class="col skills__card__section">
+                <span>2010-2012</span>
+                <h6>Graphic Designer</h6>
+                <p>International Design Institute</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 skills__card">
+            <div class="services__card__title">
+              <h4>My Skills</h4>
+            </div>
+            <div class="row flex-column">
+              <div class="col skills__card__section my-skills">
+                <h6>HTML5</h6>
+                <div class="skill-bar">
+                  <span>92%</span>
+                </div>
+              </div>
+              <div class="col skills__card__section my-skills">
+                <h6>WordPress</h6>
+                <div class="skill-bar">
+                  <span>75%</span>
+                </div>
+              </div>
+              <div class="col skills__card__section my-skills">
+                <h6>Magento</h6>
+                <div class="skill-bar">
+                  <span>86%</span>
+                </div>
+              </div>
+              <div class="col skills__card__section my-skills">
+                <h6>UI/UX</h6>
+                <div class="skill-bar">
+                  <span>88%</span>
+                </div>
+              </div>
+              <div class="col skills__card__section my-skills">
+                <h6>CSS3</h6>
+                <div class="skill-bar">
+                  <span>92%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
 
     <section id="portfolio"></section>
 
@@ -176,6 +263,7 @@
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/myscript.js"></script>
 </body>
 
 </html>
