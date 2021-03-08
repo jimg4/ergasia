@@ -157,10 +157,16 @@ html {
     border-left: var(--border);
     height: 100%;
     padding: 1.45em;
+    font-weight: 600;
 }
 
 #header nav ul a:nth-last-of-type(1) {
     border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-brand {
+    font-size: 1.75em;
+    font-weight: bold;
 }
 
 /* hero section */
@@ -171,11 +177,23 @@ html {
     background-repeat: no-repeat;
 }
 
+#hero h6 {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    font-weight: 500;
+}
+#hero h1 {
+    font-size: 5.5em;
+    font-weight: 700;
+}
+#hero h2 {
+    font-size: 2.4em;
+    margin-top: 1em;
+    font-weight: 500;
+}
+
 .hero-text {
     color: white;
-}
-.hero-text * + * {
-    margin-top: 1em;
 }
 
 /* welcome section  */
@@ -202,6 +220,26 @@ html {
 #welcome img {
     max-width: 100%;
 }
+.welcome-text h3 {
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.welcome-text h5 {
+    font-weight: 600;
+    font-size: 1.125em;
+}
+
+.welcome-text p:nth-of-type(1) {
+    font-weight: 400;
+    font-size: 1.125em;
+    color: var(--gray);
+}
+.welcome-text p:nth-of-type(2) {
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--gray);
+}
 
 .btn {
     background-color: var(--accent);
@@ -217,12 +255,14 @@ html {
 
 .services-title h3 {
     position: relative;
+    font-size: 2.7em;
+    font-weight: 800;
 }
 
 .services-title h3::before {
     content: "";
     position: absolute;
-    top: 200%;
+    top: 150%;
     left: 50%;
     transform: translateX(-50%);
     width: 40px;
@@ -386,4 +426,73 @@ html {
 
 .skill-bar span {
     transform: translate(0px, 7px);
+}
+/* portfolio section */
+#portfolio {
+    background-color: var(--mpez);
+    padding: var(--section-padding);
+}
+.portfolio__text h3 {
+    position: relative;
+    font-size: 2.7em;
+    font-weight: 800;
+}
+.portfolio__text h3::before {
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+.portfolio__text p {
+    margin: 4em 0;
+    color: var(--gray);
+}
+#portfolio nav a {
+    padding: 1em 2em;
+    color: var(--black);
+    position: relative;
+}
+
+#portfolio nav a:nth-of-type(1)::before {
+    content: "";
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+.portfolio__flex__item {
+    padding: 2em;
+}
+
+.portfolio__card {
+    padding: 1em;
+    width: 22rem;
+    height: 26.25rem;
+    background-color: var(--white);
+}
+
+.portfolio__card img {
+    max-width: 19.4rem;
+    margin: 3em 1em;
+}
+.card-img-center img {
+    margin: 5em 1em;
+}
+
+.portfolio__card span {
+    color: var(--gray);
+}
+.portfolio__card h5 {
+    color: var(--black);
+    font-size: 1.25em;
+    font-weight: 600;
 }
