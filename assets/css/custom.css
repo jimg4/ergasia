@@ -7,6 +7,7 @@
     --icon-bg: rgb(255, 245, 236);
     --border: 1px solid rgba(255, 255, 255, 0.2);
     --section-padding: 7em 0em;
+    --shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 /* ------------fonts---------- */
 @font-face {
@@ -215,7 +216,7 @@ html {
 .img-box {
     padding: 1em;
     background-color: #fff;
-    box-shadow: rgb(0 0 0 / 25%) 0px 25px 50px -12px;
+    box-shadow: var(--shadow);
 }
 #welcome img {
     max-width: 100%;
@@ -281,7 +282,7 @@ html {
 
 .services-box {
     background-color: #fff;
-    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow);
     padding: 2em;
 }
 
@@ -344,6 +345,7 @@ html {
 
 .skills__card__section {
     padding: 1em;
+    box-shadow: var(--shadow);
 }
 
 .skills__card:nth-of-type(1) .skills__card__section > *,
@@ -362,6 +364,27 @@ html {
     height: 10px;
     background-color: var(--black);
     position: relative;
+}
+
+#skills .skills__header {
+    margin-left: -1em;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+#skills .skills__header::before {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+.skills__header h4 {
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 #skills .skill-bar span {
@@ -449,13 +472,15 @@ html {
 }
 
 .portfolio__text p {
-    margin: 4em 0;
+    margin: 3em auto;
     color: var(--gray);
+    max-width: 40em;
 }
 #portfolio nav a {
-    padding: 1em 2em;
+    padding: 1em 1em;
     color: var(--black);
     position: relative;
+    font-weight: 600;
 }
 
 #portfolio nav a:nth-of-type(1)::before {
@@ -478,14 +503,19 @@ html {
     width: 22rem;
     height: 26.25rem;
     background-color: var(--white);
+    box-shadow: var(--shadow);
 }
 
 .portfolio__card img {
     max-width: 19.4rem;
     margin: 3em 1em;
 }
-.card-img-center img {
+.card-img-bot img {
     margin: 5em 1em;
+}
+
+.card-img-top img {
+    margin: 2em 1em;
 }
 
 .portfolio__card span {
@@ -555,4 +585,54 @@ html {
     background-color: transparent;
     border: 2px solid var(--accent);
     z-index: -1;
+}
+
+/* recent section */
+
+/* contact section */
+
+#contact {
+    background: linear-gradient(90deg, var(--accent) 33.3%, transparent 33.3%);
+    padding: var(--section-padding);
+}
+
+@media screen and (max-width: 990px) {
+    #contact {
+        background: var(--white);
+    }
+}
+
+.contact-container {
+    background-color: var(--white);
+    padding: 2em;
+    box-shadow: var(--shadow);
+}
+
+.contact-container input + label {
+    margin-bottom: 2em;
+}
+
+.contact-container input {
+    padding: 0.3em;
+}
+
+.contact-info p {
+    color: var(--gray);
+}
+
+#contact h4 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+#contact h4::before {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: var(--accent);
 }
