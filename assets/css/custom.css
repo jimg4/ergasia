@@ -496,3 +496,63 @@ html {
     font-size: 1.25em;
     font-weight: 600;
 }
+
+/* testimonial section */
+#testimonials {
+    padding: var(--section-padding);
+}
+
+/* .testimonial-text {
+    padding: 0 1em;
+} */
+.testimonial-text p {
+    width: 22.5em;
+    color: var(--gray);
+}
+
+.testimonial-text h6 {
+    color: var(--black);
+    font-weight: 600;
+}
+.testimonial-text span {
+    color: var(--black);
+    border-radius: 30px;
+    padding: 0.25em 0.5em;
+    font-weight: 600;
+    font-size: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(15 10 10 / 10%);
+}
+.testimonial-text i {
+    color: var(--accent);
+}
+
+.testimonial__item {
+    max-width: 50%;
+    max-height: 210px;
+    padding: 1em 1em;
+}
+
+.testimonial__card img {
+    max-width: 100%;
+}
+
+#testimonials img {
+    left: 2em;
+}
+
+#testimonials .img-wrapper {
+    position: relative;
+}
+
+#testimonials .img-wrapper::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 75%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    z-index: -1;
+}
