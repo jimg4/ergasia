@@ -199,6 +199,8 @@ body {
         url(../img/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 }
 
 #hero h6 {
@@ -220,6 +222,52 @@ body {
     color: white;
 }
 
+.shape {
+    width: 400px;
+    height: 350px;
+    position: absolute;
+}
+
+.hero-top {
+    top: -2em;
+    left: -1em;
+}
+
+.hero-bot {
+    bottom: -150px;
+    right: -2em;
+}
+
+#hero .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 2em;
+    bottom: 1em;
+    z-index: 9;
+}
+
+#hero a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: var(--icon-bg);
+    margin-right: 1em;
+    color: var(--black);
+    text-decoration: none;
+}
+
+#hero a:hover {
+    background-color: var(--black);
+    transition: all 250ms ease-in-out;
+}
+#hero a:hover i {
+    color: white;
+}
 /* welcome section  */
 #welcome {
     background: linear-gradient(90deg, var(--accent) 33.3%, transparent 33.3%);
@@ -527,6 +575,7 @@ body {
     height: 26.25rem;
     background-color: var(--white);
     box-shadow: var(--shadow);
+    margin: 0 auto;
 }
 
 .portfolio__card img {
@@ -555,9 +604,6 @@ body {
     padding: var(--section-padding);
 }
 
-/* .testimonial-text {
-    padding: 0 1em;
-} */
 .testimonial-text p {
     max-width: 22.5em;
     color: var(--gray);
@@ -580,8 +626,6 @@ body {
 }
 
 .testimonial__item {
-    max-width: 50%;
-    max-height: 210px;
     padding: 1em 1em;
 }
 
@@ -595,6 +639,7 @@ body {
 
 #testimonials .img-wrapper {
     position: relative;
+    max-width: max-content;
 }
 
 #testimonials .img-wrapper::before {
@@ -635,10 +680,6 @@ body {
     padding: 0.3em;
 }
 
-.contact-info {
-    max-width: 66.66666%;
-}
-
 .contact-info p {
     color: var(--gray);
     max-width: 35ch;
@@ -667,10 +708,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.contact-info-row {
-    padding: 2em;
 }
 
 #contact h4 {
@@ -714,13 +751,13 @@ body {
     transform: translate(calc(-100% + 1em), 0.5em);
     pointer-events: none;
     color: var(--gray);
+    transition: all 0.5s ease-in-out;
 }
 
 .contact__subject input:focus + label,
 .contact__comment textarea:focus + label,
 .contact__name input:focus + label,
 .contact__email input:focus + label {
-    transition: all 0.5s ease-in-out;
     transform: translate(calc(-100% + 1em), -1.75em);
     color: var(--accent);
     font-size: 14px;
@@ -731,9 +768,34 @@ body {
 .contact__comment textarea:not(:placeholder-shown) + label,
 .contact__name input:not(:placeholder-shown) + label,
 .contact__email input:not(:placeholder-shown) + label {
-    transition: all 0.5s ease-in-out;
     transform: translate(calc(-100% + 1em), -1.75em);
     color: var(--accent);
     font-size: 14px;
     font-weight: bold;
+}
+
+/* footer styles */
+#footer {
+    background-color: var(--black);
+}
+#footer .container {
+    padding: 1em 0;
+    color: var(--white);
+}
+#footer .icons i {
+    color: var(--white);
+    margin-right: 1em;
+}
+
+#footer a:hover {
+    background-color: var(--black);
+    transition: all 250ms ease-in-out;
+    text-decoration: none;
+}
+#footer a:hover i {
+    color: var(--accent);
+}
+
+#footer span {
+    white-space: pre;
 }
