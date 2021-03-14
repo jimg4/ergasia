@@ -49,8 +49,8 @@
 
 @font-face {
     font-family: "Nunito";
-    src: url("Nunito-ExtraBold.woff2") format("woff2"),
-        url("Nunito-ExtraBold.woff") format("woff");
+    src: url("../fonts/nunito-woff/Nunito-ExtraBold.woff2") format("woff2"),
+        url("../fonts/nunito-woff/Nunito-ExtraBold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -141,6 +141,10 @@
 html {
     scroll-behavior: smooth;
     scroll-padding: 70px;
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
 }
 
 .container {
@@ -168,6 +172,25 @@ html {
 .navbar-brand {
     font-size: 1.75em;
     font-weight: bold;
+}
+
+#header .nav-link.scrolled {
+    color: var(--black);
+    border-left: 1px solid rgba(15, 10, 10, 0.1);
+}
+
+#header .nav-link.scrolled:nth-last-of-type(1) {
+    border-right: 1px solid rgba(15, 10, 10, 0.1);
+}
+
+#header nav.scrolled {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    transition: background-color 500ms ease-in-out;
+}
+
+.navbar-brand.scrolled {
+    color: var(--black);
 }
 
 /* hero section */
@@ -360,7 +383,7 @@ html {
 /* skill-bar styles */
 
 .skill-bar {
-    width: 300px;
+    max-width: 300px;
     height: 10px;
     background-color: var(--black);
     position: relative;
@@ -500,14 +523,14 @@ html {
 
 .portfolio__card {
     padding: 1em;
-    width: 22rem;
+    max-width: 22rem;
     height: 26.25rem;
     background-color: var(--white);
     box-shadow: var(--shadow);
 }
 
 .portfolio__card img {
-    max-width: 19.4rem;
+    max-width: 100%;
     margin: 3em 1em;
 }
 .card-img-bot img {
@@ -536,7 +559,7 @@ html {
     padding: 0 1em;
 } */
 .testimonial-text p {
-    width: 22.5em;
+    max-width: 22.5em;
     color: var(--gray);
 }
 
@@ -580,8 +603,8 @@ html {
     position: absolute;
     top: 10px;
     left: 5px;
-    width: 75%;
-    height: 100%;
+    width: 132px;
+    height: 142px;
     background-color: transparent;
     border: 2px solid var(--accent);
     z-index: -1;
@@ -608,16 +631,46 @@ html {
     box-shadow: var(--shadow);
 }
 
-.contact-container input + label {
-    margin-bottom: 2em;
-}
-
 .contact-container input {
     padding: 0.3em;
 }
 
+.contact-info {
+    max-width: 66.66666%;
+}
+
 .contact-info p {
     color: var(--gray);
+    max-width: 35ch;
+}
+
+.contact-info .row {
+    margin-top: 2em;
+}
+
+.contact-info span {
+    margin-left: 2em;
+}
+
+.contact-info .row div {
+    background-color: var(--icon-bg);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    color: var(--accent);
+    position: relative;
+}
+
+.contact-info i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact-info-row {
+    padding: 2em;
 }
 
 #contact h4 {
@@ -635,4 +688,52 @@ html {
     width: 30px;
     height: 3px;
     background-color: var(--accent);
+}
+
+.contact__subject,
+.contact__comment,
+.contact__name,
+.contact__email {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.contact__subject input,
+.contact__comment textarea,
+.contact__name input,
+.contact__email input {
+    width: 100%;
+    border: 1px solid rgba(15, 10, 10, 0.5);
+}
+
+.contact-container label {
+    font-size: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(calc(-100% + 1em), 0.5em);
+    pointer-events: none;
+    color: var(--gray);
+}
+
+.contact__subject input:focus + label,
+.contact__comment textarea:focus + label,
+.contact__name input:focus + label,
+.contact__email input:focus + label {
+    transition: all 0.5s ease-in-out;
+    transform: translate(calc(-100% + 1em), -1.75em);
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact__subject input:not(:placeholder-shown) + label,
+.contact__comment textarea:not(:placeholder-shown) + label,
+.contact__name input:not(:placeholder-shown) + label,
+.contact__email input:not(:placeholder-shown) + label {
+    transition: all 0.5s ease-in-out;
+    transform: translate(calc(-100% + 1em), -1.75em);
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: bold;
 }

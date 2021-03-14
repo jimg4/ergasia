@@ -9,28 +9,20 @@ const navLinks = document.querySelectorAll(".nav-link");
 //change navbar bg and colors on scroll
 window.onscroll = () => {
     if (
-        document.body.scrollTop >= 50 ||
-        document.documentElement.scrollTop > 50
+        document.body.scrollTop >= 100 ||
+        document.documentElement.scrollTop >= 100
     ) {
-        header.style.background = "white";
-        header.style.boxShadow = "0px 5px 50px -12px rgba(0, 0, 0, 0.25)";
-        logo.style.color = "black";
+        header.classList.add("scrolled");
+        logo.classList.add("scrolled");
 
         navLinks.forEach((e) => {
-            e.style.color = "black";
-            e.style.borderLeft = "1px solid rgba(15,10,10,0.1)";
+            e.classList.add("scrolled");
         });
-
-        navLinks[navLinks.length - 1].style.borderRight =
-            "1px solid rgba(15,10,10,0.1)";
     } else {
-        header.style.background = "";
-        header.style.boxShadow = "";
-        logo.style.color = "";
+        header.classList.remove("scrolled");
+        logo.classList.remove("scrolled");
         navLinks.forEach((e) => {
-            e.style.color = "";
-            e.style.borderLeft = "";
+            e.classList.remove("scrolled");
         });
-        navLinks[navLinks.length - 1].style.borderRight = "";
     }
 };
