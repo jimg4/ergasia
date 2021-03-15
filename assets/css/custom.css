@@ -193,6 +193,10 @@ body {
     color: var(--black);
 }
 
+#header .nav-link.active-link {
+    color: var(--accent);
+}
+
 /* hero section */
 #hero {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
